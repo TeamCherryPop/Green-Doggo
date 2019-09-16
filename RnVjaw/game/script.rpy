@@ -7,6 +7,7 @@ define e = Character("???")
 define s = Character("Emily")
 define m = Character("Matthew")
 define be = Character("")
+define n = Character("Nayoki")
 
 
 # The game starts here.
@@ -47,18 +48,17 @@ label start:
     show movie ded
 
     e"We don’t have any clue either. Everyone else doesn’t remember how they got here either."
-    m"Well, I’m Matthew Walts. Unlike seemingly everyone else, I don’t have any Ultimate talent. Kinda disappointing, isn’t it?
-"
-    e""
-    e""
-    e""
-    e""
-    e""
-    e""
-    e""
-    e""
-    e""
-    e""
+    m"Well, I’m Matthew Walts. Unlike seemingly everyone else, I don’t have any Ultimate talent. Kinda disappointing, isn’t it?"
+    be"*Matthew Walts, Ultimate talent N/A*"
+    m"Hey, how about you introduce yourself as well? "
+    e"Me?"
+    n"Well, I’m Nayoki Furns, the Ultimate Surfer!"
+    be"*Nayoki Furns, Ultimate Surfer*"
+    n"Also, sorry for yelling at you."
+    e"It’s fine. I should introduce myself as well…"
+    s"My name is Emily Natzuki, and I am the Ultimate Secretary. It’s nice to meet you."
+    be"*Emily Natzuki, Ultimate Secretary*"
+    s"You said there are others?"
 
 
     # This ends the game.
