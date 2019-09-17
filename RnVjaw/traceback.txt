@@ -1,50 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 26, in script
-    e "Hey! Wake up!"
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-IOError: Couldn't find file 'SpoopyV2.wav'.
+  File "game/script.rpy", line 76, in script
+    call screen imagemap_example
+ScriptError: could not find label 'room'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 26, in script
-    e "Hey! Wake up!"
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\ast.py", line 669, in execute
-    statement_name("say")
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\ast.py", line 45, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\exports.py", line 1592, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\display\core.py", line 2248, in do_with
-    clear=clear)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\display\core.py", line 2699, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\display\core.py", line 3377, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\audio\audio.py", line 1023, in periodic
-    six.reraise(exc[0], exc[1], exc[2])
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\audio\audio.py", line 1001, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\audio\audio.py", line 942, in periodic_pass
-    c.periodic()
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\audio\audio.py", line 420, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\audio\audio.py", line 72, in load
-    rv = renpy.loader.load(fn)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'SpoopyV2.wav'.
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\bootstrap.py", line 314, in bootstrap
+    renpy.main.main()
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\main.py", line 529, in main
+    run(restart)
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\execution.py", line 892, in run_context
+    context.run()
+  File "game/script.rpy", line 76, in script
+    call screen imagemap_example
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\script.py", line 894, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'room'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 RnVjaw 1.0
-Mon Sep 16 13:37:31 2019
+Tue Sep 17 06:11:25 2019
