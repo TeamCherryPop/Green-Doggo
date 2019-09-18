@@ -8,12 +8,15 @@ define s = Character("Emily")
 define m = Character("Matthew")
 define be = Character("")
 define n = Character("Nayoki")
+define k = Character("Katin")
+define i = Character("Ishai")
 
+init:
+    $ my_left = Position(xpos=0.1, ypos=1)
 
 # The game starts here.
 
 label start:
-
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -25,12 +28,15 @@ label start:
     # directory.
     play music "clockwork.mp3"
     show movie poster
+    hide character happy
+    hide stout hout
     # These display lines of dialogue.
     e "Hey! Wake up!"
     s "….."
     e "C’mon! You need to wake up!"
     scene bg energy
-    show movie poster
+    show movie poster at left with easeinleft
+    show character happy at right with easeinright
     e "Here…WAKE UP!"
     s "ugh……"
     be "*wakes up on a floor of a classroom with two males looking down at her*"
@@ -64,9 +70,9 @@ screen imagemap_example:
         hotspot (456,18,822,181) action Jump("garden") alt "Garden"
         hotspot (454,190,822,357) action Jump("cafe") alt "Cafe"
         hotspot (456,370,825,534) action Jump("room") alt "Room"
-        hotspot (884,19,1247,180) action Jump("blank") alt "Blank"
-        hotspot (881,201,1250,363) action Jump("blank") alt "Blank"
-        hotspot (881,373,1249,537) action Jump("blank") alt "Blank"
+        hotspot (884,19,1247,180) action Jump("bathrooms") alt "Bathrooms"
+        hotspot (881,201,1250,363) action Jump("nurse") alt "Nurse"
+        hotspot (881,373,1249,537) action Jump("lab") alt "Lab"
         hotspot (496,535,774,607) action Jump("end") alt "End"
 
 
@@ -84,11 +90,35 @@ label outside:
     jump Istart
 
 label search:
-
+    show bg energy
     m "That’s a pretty good idea. You get to see the layout of everything here, and we can talk to anyone that we find."
-
-    e "I've heard that some schools have a competitive science team, but to me research is something that can't be rushed."
-
+    hide movie poster
+    hide character happy
+    hide stout hout
+    show bg proto
+    with dissolve
+    show movie poster at left with easeinleft
+    show character happy at right with easeinright
+    e "Who are you?"
+    s "I am Emily Natzuki, Ultimate Secretary."
+    k "Well, I am Katin Minoko, the Ultimate Dancer."
+    be "*Katin Minoko, Ultimate Dancer*"
+    m "Wait, didn’t you say you were going to get some rest?"
+    k "Someone kept trying to wake me up. They said something like, 'Now’s not the time to rest.'"
+    k " Plus, I can just get some rest later. Don’t you have other people to introduce yourself to Emily? You should get going."
+    show stout hout at center with easeinleft
+    e "Hello. Mind giving me an introduction?"
+    s "Well, I am Emily,Emily Natzuki, and who might you be?"
+    i "Ishai Nomoka"
+    s "But what's yor talent?"
+    i "It doesnt concern you"
+    be "*Ishai Nomoka, Ultimate ???*"
+    m "Why? We are all trapped in this situation together!"
+    i "Which is exactly my point. We don’t know what’s going to happen, and it is unlikely that whoever trapped us will willingly let us leave."
+    i "Well, I’m going. I don’t want to be stuck answering stupid questions."
+    m "Oh well..."
+    m "That did not go as planned"
+    m "Lets... go somewhere else"
     jump Istart
 
 label warehouse:
@@ -115,6 +145,25 @@ label room:
     e "Really good background art is hard to make, which is why so many games use filtered photographs. Maybe you can change that."
 
     jump Istart
+label bathrooms:
+    m "That’s a pretty good idea. You get to see the layout of everything here, and we can talk to anyone that we find."
+
+    e "Really good background art is hard to make, which is why so many games use filtered photographs. Maybe you can change that."
+
+    jump Istart
+label nurse:
+    m "That’s a pretty good idea. You get to see the layout of everything here, and we can talk to anyone that we find."
+
+    e "Really good background art is hard to make, which is why so many games use filtered photographs. Maybe you can change that."
+
+    jump Istart
+label lab:
+    m "That’s a pretty good idea. You get to see the layout of everything here, and we can talk to anyone that we find."
+
+    e "Really good background art is hard to make, which is why so many games use filtered photographs. Maybe you can change that."
+
+    jump Istart
+
 label end:
     m "that should be all..."
     m "let's go to bed"
