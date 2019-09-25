@@ -560,8 +560,6 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
 
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.about = ""

@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 76, in script
-    call screen imagemap_example
-ScriptError: could not find label 'room'.
+  File "game/script.rpy", line 99, in script
+    b "Who are you?"
+Exception: Sayer 'b' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\bootstrap.py", line 314, in bootstrap
-    renpy.main.main()
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\main.py", line 529, in main
-    run(restart)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\main.py", line 139, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\execution.py", line 892, in run_context
-    context.run()
-  File "game/script.rpy", line 76, in script
-    call screen imagemap_example
-  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\script.py", line 894, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'room'.
+  File "game/script.rpy", line 99, in script
+    b "Who are you?"
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\ast.py", line 676, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\0megabeast_dev\Downloads\renpy-7.3.2-sdk\renpy\ast.py", line 574, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'b' is not defined.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 RnVjaw 1.0
-Tue Sep 17 06:11:25 2019
+Tue Sep 17 20:01:31 2019

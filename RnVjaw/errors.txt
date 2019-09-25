@@ -2,7 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 90: indentation mismatch.
+File "game/script.rpy", line 17: expecting name after dot.
+    xalign .1 yalign 1.0
+            ^
+
+File "game/script.rpy", line 19: expecting name after dot.
+    xalign .9 yalign 1.0
+            ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Tue Sep 17 06:17:13 2019
+Tue Sep 17 19:45:46 2019
